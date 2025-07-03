@@ -104,10 +104,10 @@ const Homepage = () => {
               </div>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#home" className="text-gray-600 hover:text-blue-600">Home</a>
-              <a href="/about" className="text-gray-600 hover:text-blue-600">About</a>
-              <a href="#features" className="text-gray-600 hover:text-blue-600">Features</a>
-              <a href="#contact" className="text-gray-600 hover:text-blue-600">Contact</a>
+              <Link to ="#home" className="text-gray-600 hover:text-blue-600">Home</Link>
+              <Link to ="/about" className="text-gray-600 hover:text-blue-600">About</Link>
+              <Link to ="/Features" className="text-gray-600 hover:text-blue-600">Features</Link>
+              <Link to ="/Contact" className="text-gray-600 hover:text-blue-600">Contact</Link>
             </div>
             <div className="flex items-center space-x-4">
               <Link

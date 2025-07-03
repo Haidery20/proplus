@@ -5,6 +5,7 @@ import {
   Shield,
   Award,
   Clock,
+  Globe,
   CheckCircle,
   Target,
   Lightbulb,
@@ -12,11 +13,13 @@ import {
   Phone,
   Mail,
   MapPin,
+  Star,
   Calendar,
   Activity,
   FileText,
   MessageSquare
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   const values = [
@@ -115,6 +118,39 @@ const About: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div className="flex items-center space-x-3">
+              <div className="bg-blue-600 p-2 rounded-lg">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold text-gray-900">ProPlus</h1>
+              </div>
+            </div>
+            <div className="hidden md:flex items-center space-x-8">
+              <Link to="/" className="text-gray-600 hover:text-blue-600">Home</Link>
+              <Link to="/about" className="text-blue-600 font-medium">About</Link>
+              <Link to="/features" className="text-gray-600 hover:text-blue-600">Features</Link>
+              <Link to="/contact" className="text-gray-600 hover:text-blue-600">Contact</Link>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link
+                to="/signin"
+                className="text-gray-600 hover:text-blue-600 transition-colors duration-200"
+              >
+                Sign In
+              </Link>
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+                Book Appointment
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 via-white to-green-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -381,6 +417,66 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold">HealthCare</h3>
+                  <p className="text-sm text-gray-400">Management Platform</p>
+                </div>
+              </div>
+              <p className="text-gray-400">
+                Empowering healthcare professionals with modern tools for better patient care.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Product</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link to="/features" className="hover:text-white transition-colors duration-200">Features</Link></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Pricing</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Security</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Integrations</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Support</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Documentation</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Help Center</a></li>
+                <li><Link to="/contact" className="hover:text-white transition-colors duration-200">Contact Us</Link></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Training</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <div className="space-y-3 text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4" />
+                  <span>support@healthcare.com</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>San Francisco, CA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 HealthCare Management Platform. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
