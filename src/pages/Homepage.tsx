@@ -328,7 +328,7 @@ const Homepage = () => {
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold">HealthCare</h3>
+                  <h3 className="text-lg font-bold">Proplus</h3>
                   <p className="text-sm text-gray-400">Management Platform</p>
                 </div>
               </div>
@@ -350,7 +350,7 @@ const Homepage = () => {
               <ul className="space-y-2 text-gray-400">
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Documentation</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Help Center</a></li>
-                <li><a href="#" className="hover:text-white transition-colors duration-200">Contact Us</a></li>
+                <li><a href="/contact" className="hover:text-white transition-colors duration-200">Contact Us</a></li>
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Training</a></li>
               </ul>
             </div>
@@ -359,21 +359,21 @@ const Homepage = () => {
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+255 766 831 124</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
-                  <span>support@healthcare.com</span>
+                  <span>info@proplus.co.tz</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
-                  <span>San Francisco, CA</span>
+                  <span>Plot 235 Oyster Bay, Mtwara Crescent, Dar es Salaam</span>
                 </div>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 HealthCare Management Platform. All rights reserved.</p>
+            <p>&copy; 2025 Proplus LTD.Powered by KONEKTA, All rights reserved.</p>
           </div>
         </div>
       </footer>
