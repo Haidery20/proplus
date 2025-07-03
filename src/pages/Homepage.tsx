@@ -116,9 +116,13 @@ const Homepage = () => {
               >
                 Sign In
               </Link>
+              <Link 
+                to="/dashboard">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
                 Book Appointment
               </button>
+              </Link>
+
             </div>
           </div>
         </div>

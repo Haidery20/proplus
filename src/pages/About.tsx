@@ -83,7 +83,7 @@ const About = () => {
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Healthcare Providers', icon: Users },
+    { number: '100+', label: 'Healthcare Providers', icon: Users },
     { number: '500K+', label: 'Patients Served', icon: Heart },
     { number: '99.9%', label: 'System Uptime', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
@@ -91,28 +91,28 @@ const About = () => {
 
   const team = [
     {
-      name: 'Dr. Sarah Mitchell',
-      role: 'Chief Medical Officer',
+      name: 'Maclyn Jerry',
+      role: 'Co-Founder & CFO',
       bio: '15+ years in healthcare technology and patient care optimization.',
-      avatar: 'SM'
+      avatar: 'MJ'
     },
     {
-      name: 'Michael Rodriguez',
-      role: 'Chief Technology Officer',
+      name: 'Franc Mussa Israel',
+      role: 'Co-Founder & CEO',
       bio: 'Expert in healthcare IT systems and data security with 12 years experience.',
-      avatar: 'MR'
+      avatar: 'FM'
     },
     {
-      name: 'Emily Chen',
-      role: 'Head of Product',
+      name: 'Jie Sun',
+      role: 'Director',
       bio: 'Specializes in user experience design for healthcare applications.',
-      avatar: 'EC'
+      avatar: 'JS'
     },
     {
-      name: 'Dr. James Wilson',
-      role: 'Clinical Advisor',
+      name: 'Evans Makundi',
+      role: 'Director',
       bio: 'Board-certified physician with expertise in digital health solutions.',
-      avatar: 'JW'
+      avatar: 'EM'
     }
   ];
 
@@ -166,7 +166,7 @@ const About = () => {
                 <span className="text-blue-600 block">One Practice at a Time</span>
               </h1>
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                ProPlus Healthcare Management Platform is revolutionizing how healthcare providers 
+                ProPlus is revolutionizing how healthcare providers 
                 deliver care by combining cutting-edge technology with intuitive design to create 
                 seamless experiences for both providers and patients.
               </p>
@@ -375,7 +375,7 @@ const About = () => {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
               <p className="text-gray-600 mb-4">Speak with our healthcare technology experts</p>
-              <p className="text-blue-600 font-medium">+1 (555) 123-4567</p>
+              <p className="text-blue-600 font-medium">+255 766 831 124</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
               <div className="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -383,7 +383,7 @@ const About = () => {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
               <p className="text-gray-600 mb-4">Get detailed information about our platform</p>
-              <p className="text-green-600 font-medium">info@proplushealthcare.com</p>
+              <p className="text-green-600 font-medium">info@proplus.co.tz</p>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center">
               <div className="bg-purple-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -391,7 +391,7 @@ const About = () => {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
               <p className="text-gray-600 mb-4">Schedule a demo at our headquarters</p>
-              <p className="text-purple-600 font-medium">San Francisco, CA</p>
+              <p className="text-purple-600 font-medium">Plot 235 Oyster Bay, Mtwara Crescent, Dar es Salaam</p>
             </div>
           </div>
         </div>
@@ -428,7 +428,7 @@ const About = () => {
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold">HealthCare</h3>
+                  <h3 className="text-lg font-bold">Proplus</h3>
                   <p className="text-sm text-gray-400">Management Platform</p>
                 </div>
               </div>
@@ -459,15 +459,15 @@ const About = () => {
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+255 766 831 124</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4" />
-                  <span>support@healthcare.com</span>
+                  <span>info@proplus.co.tz</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-4 h-4" />
-                  <span>San Francisco, CA</span>
+                  <span>Plot 235 Oyster Bay, Mtwara Crescent, Dar es Salaam</span>
                 </div>
               </div>
             </div>
