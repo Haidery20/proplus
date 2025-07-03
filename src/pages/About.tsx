@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const About: React.FC = () => {
+const About = () => {
   const values = [
     {
       icon: Heart,
