@@ -20,6 +20,7 @@ import {
   MessageSquare
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const About = () => {
   const values = [
@@ -83,10 +84,39 @@ const About = () => {
   ];
 
   const stats = [
-    { number: '100+', label: 'Healthcare Providers', icon: Users },
-    { number: '500K+', label: 'Patients Served', icon: Heart },
-    { number: '99.9%', label: 'System Uptime', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
+    { 
+      number: 100, 
+      suffix: '+',
+      label: 'Healthcare Providers', 
+      icon: Users,
+      color: 'blue',
+      progress: 75
+    },
+    { 
+      number: 500000, 
+      suffix: '+',
+      label: 'Patients Served', 
+      icon: Heart,
+      color: 'green',
+      progress: 90
+    },
+    { 
+      number: 99.9, 
+      suffix: '%',
+      decimals: 1,
+      label: 'System Uptime', 
+      icon: TrendingUp,
+      color: 'purple',
+      progress: 99
+    },
+    { 
+      number: 24, 
+      suffix: '/7',
+      label: 'Support Available', 
+      icon: Clock,
+      color: 'orange',
+      progress: 100
+    }
   ];
 
   const team = [
@@ -307,7 +337,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Animated Stats Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -322,12 +352,26 @@ const About = () => {
             {stats.map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <div key={index} className="text-center">
-                  <div className="bg-white bg-opacity-20 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-white" />
+                <div key={index} className="text-center group">
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="relative">
+                      <AnimatedCounter
+                        end={stat.number}
+                        suffix={stat.suffix}
+                        decimals={stat.decimals || 0}
+                        progress={stat.progress}
+                        size="lg"
+                        color="white"
+                        duration={2500}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <div className="w-12 h-12 mx-auto bg-white bg-opacity-20 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-opacity-30">
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                      <p className="text-blue-100 font-medium">{stat.label}</p>
+                    </div>
                   </div>
-                  <p className="text-3xl lg:text-4xl font-bold text-white mb-2">{stat.number}</p>
-                  <p className="text-blue-100">{stat.label}</p>
                 </div>
               );
             })}
