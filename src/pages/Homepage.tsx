@@ -136,7 +136,6 @@ const Homepage = () => {
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Built to simplify healthcare
-                  <span className="text-blue-600 block">LEADING HEALTHCARE TRANSFORMATION.</span>
                   {/* <span className="text-green-600">Simplified</span> */}
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
