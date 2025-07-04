@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import {
   LayoutDashboard,
   Users,
@@ -80,7 +81,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
       }`}>
         {/* Logo */}
         <div className="flex items-center justify-between h-16 px-6 border-b border-gray-100">
-          <div className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200">
             <div className={`p-2 rounded-lg ${userRole === 'doctor' ? 'bg-blue-600' : 'bg-green-600'}`}>
               <Heart className="w-6 h-6 text-white" />
             </div>
@@ -88,7 +89,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
               <h1 className="text-xl font-bold text-gray-900">ProPlus</h1>
               <p className="text-xs text-gray-500 capitalize">{userRole} Portal</p>
             </div>
-          </div>
+          </Link>
           <button
             onClick={() => setIsSidebarOpen(false)}
             className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
@@ -147,10 +148,13 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
               <p className="text-xs text-gray-500 truncate">{userInfo.role}</p>
             </div>
           </div>
-          <button className="w-full mt-2 flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200">
+          <Link 
+            to="/"
+            className="w-full mt-2 flex items-center space-x-2 px-3 py-2 text-sm text-gray-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors duration-200"
+          >
             <LogOut className="w-4 h-4" />
             <span>Sign Out</span>
-          </button>
+          </Link>
         </div>
       </div>
 
