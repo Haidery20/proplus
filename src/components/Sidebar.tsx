@@ -36,7 +36,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
             <Heart className="w-6 h-6 text-white" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-gray-900">HealthCare</h1>
+            <h1 className="text-xl font-bold text-gray-900">ProPlus</h1>
             <p className="text-sm text-gray-500">Management Platform</p>
           </div>
         </div>
