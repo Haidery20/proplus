@@ -33,7 +33,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange }) => {
       <div className="p-6 border-b border-gray-100">
         <div className="flex items-center space-x-3">
           <div className="bg-blue-600 p-2 rounded-lg">
-            <Heart className="w-6 h-6 text-white" />
+          <img src="D:\My Projects\project proplus\project\images\proplus.jpg" alt="proplus" />
           </div>
           <div>
             <h1 className="text-xl font-bold text-gray-900">ProPlus</h1>
