@@ -576,72 +576,68 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
 
-    
-  );
-
-          {/* Footer */}
-          <div>
-          <footer className="bg-gray-900 text-white py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="bg-blue-600 p-2 rounded-lg">
-                      <Heart className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold">Proplus</h3>
-                      <p className="text-sm text-gray-400">Management Platform</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-400">
-                    Empowering healthcare professionals with modern tools for better patient care.
-                  </p>
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="bg-blue-600 p-2 rounded-lg">
+                  <Heart className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-4">Product</h4>
-                  <ul className="space-y-2 text-gray-400">
-                    <li><Link to="/features" className="hover:text-white transition-colors duration-200">Features</Link></li>
-                    <li><a href="#" className="hover:text-white transition-colors duration-200">Pricing</a></li>
-                    <li><a href="#" className="hover:text-white transition-colors duration-200">Security</a></li>
-                    <li><a href="#" className="hover:text-white transition-colors duration-200">Integrations</a></li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-4">Support</h4>
-                  <ul className="space-y-2 text-gray-400">
-                    <li><a href="#" className="hover:text-white transition-colors duration-200">Documentation</a></li>
-                    <li><a href="#" className="hover:text-white transition-colors duration-200">Help Center</a></li>
-                    <li><Link to="/contact" className="hover:text-white transition-colors duration-200">Contact Us</Link></li>
-                    <li><a href="#" className="hover:text-white transition-colors duration-200">Training</a></li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-4">Contact</h4>
-                  <div className="space-y-3 text-gray-400">
-                    <div className="flex items-center space-x-2">
-                      <Phone className="w-4 h-4" />
-                      <span>+255 766 831 124</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <Mail className="w-4 h-4" />
-                      <span>info@proplus.co.tz</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <MapPin className="w-4 h-4" />
-                      <span>Plot 235 Oyster Bay, Mtwara Crescent, Dar es Salaam</span>
-                    </div>
-                  </div>
+                  <h3 className="text-lg font-bold">Proplus</h3>
+                  <p className="text-sm text-gray-400">Management Platform</p>
                 </div>
               </div>
-              <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 HealthCare Management Platform. All rights reserved.</p>
+              <p className="text-gray-400">
+                Empowering healthcare professionals with modern tools for better patient care.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Product</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link to="/features" className="hover:text-white transition-colors duration-200">Features</Link></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Pricing</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Security</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Integrations</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Support</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Documentation</a></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Help Center</a></li>
+                <li><Link to="/contact" className="hover:text-white transition-colors duration-200">Contact Us</Link></li>
+                <li><a href="#" className="hover:text-white transition-colors duration-200">Training</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <div className="space-y-3 text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Phone className="w-4 h-4" />
+                  <span>+255 766 831 124</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Mail className="w-4 h-4" />
+                  <span>info@proplus.co.tz</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4" />
+                  <span>Plot 235 Oyster Bay, Mtwara Crescent, Dar es Salaam</span>
+                </div>
               </div>
             </div>
-          </footer>
           </div>
+          <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 HealthCare Management Platform. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default Contact;

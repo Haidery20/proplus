@@ -12,11 +12,11 @@ import {
   Phone,
   Mail,
   MapPin,
-  Star
+  Star,
+  Clock
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const Homepage = () => {
   const features = [
@@ -83,10 +83,39 @@ const Homepage = () => {
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Healthcare Providers' },
-    { number: '500K+', label: 'Patients Served' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
+    { 
+      number: 10000, 
+      suffix: '+',
+      label: 'Healthcare Providers',
+      icon: Users,
+      color: 'blue',
+      progress: 85
+    },
+    { 
+      number: 500000, 
+      suffix: '+',
+      label: 'Patients Served',
+      icon: Heart,
+      color: 'green',
+      progress: 92
+    },
+    { 
+      number: 99.9, 
+      suffix: '%',
+      decimals: 1,
+      label: 'Uptime Guarantee',
+      icon: Shield,
+      color: 'purple',
+      progress: 99
+    },
+    { 
+      number: 24, 
+      suffix: '/7',
+      label: 'Support Available',
+      icon: Clock,
+      color: 'orange',
+      progress: 100
+    }
   ];
 
   return (
@@ -222,16 +251,50 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Animated Stats Section */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Trusted by Healthcare Professionals Worldwide</h2>
+            <p className="text-xl text-gray-600">Join thousands of providers transforming healthcare delivery</p>
+          </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-3xl lg:text-4xl font-bold text-gray-900 mb-2">{stat.number}</p>
-                <p className="text-gray-600">{stat.label}</p>
-              </div>
-            ))}
+            {stats.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <div key={index} className="text-center group">
+                  <div className="flex flex-col items-center space-y-4">
+                    <div className="relative">
+                      <AnimatedCounter
+                        end={stat.number}
+                        suffix={stat.suffix}
+                        decimals={stat.decimals || 0}
+                        progress={stat.progress}
+                        size="lg"
+                        color={stat.color}
+                        duration={2500}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <div className={`w-12 h-12 mx-auto rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 ${
+                        stat.color === 'blue' ? 'bg-blue-100 group-hover:bg-blue-200' :
+                        stat.color === 'green' ? 'bg-green-100 group-hover:bg-green-200' :
+                        stat.color === 'purple' ? 'bg-purple-100 group-hover:bg-purple-200' :
+                        'bg-orange-100 group-hover:bg-orange-200'
+                      }`}>
+                        <Icon className={`w-6 h-6 ${
+                          stat.color === 'blue' ? 'text-blue-600' :
+                          stat.color === 'green' ? 'text-green-600' :
+                          stat.color === 'purple' ? 'text-purple-600' :
+                          'text-orange-600'
+                        }`} />
+                      </div>
+                      <p className="text-gray-600 font-medium">{stat.label}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
